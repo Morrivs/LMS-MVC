@@ -1,10 +1,10 @@
 <?php
-    use app\core\Router;
+
+use App\Controllers\HomeController;
+use app\core\Router;
 
     // Router::get('/jello',function(){
     //     echo "pelotudo";
     // });
 
-    Router::get('/',function(){
-        echo "welcome from home";
-    });
+    Router::get('/',([new HomeController, "index"]));//acctede al metodo index
