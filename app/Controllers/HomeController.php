@@ -10,8 +10,8 @@ use App\Models\User;
         public function index(){
             // echo "compai";
             // View::render("home");
-
-            print_r(User::find(2));
+            echo '<pre>';
+            $user = new User();
+            print_r($user->orderBy("id","DESC")->limit(2)->offset(1)->get());
         }
-
     }

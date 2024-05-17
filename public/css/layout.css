@@ -1,0 +1,266 @@
+*{
+    font-family: 'Public Sans', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    display: flex;
+    color: #252525;
+}
+
+aside{
+    height: 100vp;
+    width:320px;
+    box-shadow: 0 2px 15px rgba(51,51,51, 0.5);
+    z-index: 2;
+    background-color: #fff;
+}
+
+aside ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+aside .header {
+    padding: 30px 40px 43px 40px;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+    color: #aeb9cd;
+}
+
+aside .header img{
+    height: 32px;
+    margin: 15px 0;
+}
+
+aside .header i{
+    display: none;
+}
+
+aside ul li {
+    margin: 0px 20px;
+    padding: 13px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+    height: 52px;
+}
+
+aside hr{
+    margin: 10px 20px;
+    border: none;
+    border-top: 1px solid #eee;
+}
+
+aside ul li i {
+    color: rgb(0,113,220);
+    font-size: 20px;
+    width: 20px;
+}
+
+aside ul li label{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+aside ul li .active{
+    background-color: #0071dc;
+    color: #fff;
+    border-radius: 5px;
+}
+
+aside ul li .active i{
+    color: #fff;
+}
+
+@media screen and (max-width:1140px) {
+    aside{
+        position: fixed;
+        top: 0;
+        left: -320px;
+        z-index: 5;
+        transition: all .3s ease;
+    }
+    aside.show{
+        left: 0;
+    }
+    aside .header i{
+        display: block;
+    }
+}
+
+.layout-content{
+    flex: 1;
+    background-color: #f8f8f8;
+}
+
+.layout-content header{
+    display: flex;
+    padding: 30px 15px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ededed;
+    background-color: #fff;
+}
+
+.layout-content header img{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+}
+
+.layout-content header .user-information{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.layout-content header .user-information h4{
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.layout-content header .user-information h4 span{
+    color: #9b9b9b;
+}
+
+.layout-content header .user-information i{
+    font-size: 14px;
+}
+
+.layout-content header .user-information .fa-star.fa-solid{
+    color: #f7c04d;
+}
+
+.layout-content header .user-information .rating{
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.layout-content header .user-information .nbr-rated{
+    color: #9b9b9b;
+    font-size: 14px;
+}
+
+.layout-content header .buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0 36px;
+    height: 52px;
+    line-height: 52px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-outline-primary{
+    color: #0071dc;
+    font-weight: 800;
+    letter-spacing: 1.5;
+    font-size: 16px;      
+    border: 1px solid rgba(113, 140, 153, .15);  
+}
+
+.btn-outline-primary i{
+    font-size: 20px;      
+}
+
+.btn-outline-primary label{
+    margin-left: 15px;     
+}
+
+.cursos-pointer{
+    cursor: pointer;
+}
+
+.layout-content .header .bars{
+    width: 52px;
+    height: 52px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0;
+    color: #858c99;
+}
+
+.layout-content .header .bars i{
+    font-size: 18px;
+}
+
+.layout-content header .aside-bar{
+    color: #0071dc;
+    font-size: 25px !important;
+}
+
+@media screen and (max-width:1140px){
+
+    .layout-content header img{
+        height: 60px;
+        width: 60px;
+
+    }
+
+    .layout-content header .user-information h4{
+        font-size: 18px;
+    }
+
+    .layout-content header .user-information i{
+    font-size: 14px;
+    }
+    
+    .layout-content header .user-information .rating{
+        font-size: 14px;
+    }
+
+    .layout-content header .user-information .nbr-rated{
+        color: #9b9b9b;
+        font-size: 14px;
+    }
+
+    .layout-content .header .bars i{
+        font-size: 16px;
+    }
+
+    .layout-content header .aside-bar{
+        font-size: 20px !important;
+    }
+}
+
+@media screen and (max-width:720px){
+    header .buttons label{
+        display: none;
+    }
+
+    .layout-content header .user-information {
+        gap: 10px;
+    }
+
+    .layout-content header .user-information h4{
+        font-size: 16px;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 90%;
+        margin: 0;
+    }
+
+    .layout-content header .buttons i{
+        font-size: 14px !important;
+    }
+
+    .layout-content header .buttons {
+        gap: 5px;
+    }
+
+    header .btn-outline-primary{
+        padding: 0 15px;
+    }
+}
